@@ -57,11 +57,10 @@ input[type="submit"]:hover{
 a, p{
     padding: 10px;
     color: white;
-    transition: all .4s ease-in-out;
 }
 a:hover{
-    border-bottom: 1px solid #2F3E46;
-    transition: all .4s ease-in-out;
+    border-bottom: 4px solid #2F3E46;
+    border-radius: 5px;
 }
 h1{
     color: white;
