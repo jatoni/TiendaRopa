@@ -1,6 +1,8 @@
 <?php
-    session_start();
-    if($_SESSION["nombre"] == ""){
+    require("../models/Session.php");
+    $session = new SessionDes();
+
+    if($session->getSession() == ""){
         header("Location: ../views/login.php");
     }else{
 ?>
@@ -13,7 +15,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p>
+        <?php
+            echo $session->getSession();
+        ?>
+    </p>
+    <a href="../php/destruir.php">Cerrar</a>
 </body>
 </html>
 <?php

@@ -1,7 +1,8 @@
 <?php
-    session_start();
+    require("../models/Session.php");
+    $session = new SessionDes();
 
-    if($_SESSION["nombre"] != ""){
+    if($session->getSession() != ""){
         header("Location: home.php");
     }else{
 ?>
@@ -13,10 +14,22 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="../css/login.css">
             <title>BanJaq</title>
+            <style>
+                .error{
+                    color: red;
+                }
+            </style>
         </head>
         <body>
             <form action="../php/LogIn.php" method="post">
                 <div class="log">
+                <?php
+                    if(isset($messageError)){
+                ?>
+                    <span class="error">*<?php echo $messageError; ?></span><br>
+                <?php
+                                    }
+                ?>
                     <h1>LOGIN</h1>
                     <input type="text" name="correoUser" placeholder="EMAIL OR USER" required>
                     <input type="password" name="pass" required>
