@@ -1,0 +1,40 @@
+*{
+    margin:0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    background-color: #d4a373;
+}
+nav.menu{
+    display: flex;
+}
+nav.menu ul.men{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #faedcd;
+    padding: 10px;
+}
+nav.menu ul.men p{
+    cursor: pointer;
+    color: #9e2a2b;
+    font-size: 3.5vh;
+}
+nav.menu ul.men li ul.des{
+    border: 2px solid;
+    position: absolute;
+    width: 160px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px #9e2a2b;
+    background-color: white;
+    display: none;
+
+}
+nav.menu ul.men li ul.des li{
+    padding: 10px;
+}
+

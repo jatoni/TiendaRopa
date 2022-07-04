@@ -7,11 +7,11 @@
         public function getOnlyUser($email, $name)
         {
             try{
-                $sql = "SELECT nombre FROM tb_usuarios WHERE correo = ? OR username = ?";
+                $sql = "SELECT nombre, apellidop, apellidom FROM tb_usuarios WHERE correo = ? OR username = ?";
                 $conn = new connection();
                 $query = $conn->getConnection()->prepare($sql);
                 $query->execute(array($email, $name));
-                return $query->fetchColumn();
+                return $query->fetchAll();
                 $conn->getCloseConnection();
             }catch(PDOException $e){
                 echo "Hubo un error al hacer la busqueda: " . $e->getMessage();

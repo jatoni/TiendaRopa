@@ -21,13 +21,4 @@
             return $UserDao->getUserForUserPass($user, $pass);
         }
     }
-    // echo "hola desde LoginController";
-    // $user = new LoginUserController();
-    // $users = $user->UserExistsWithUser("5banano5","Ju.55.25.17");
-    // $email = $user->UserExists("antoniotorresj15@gmail.comv","Ju.55.25.17");
-    // if($users or $email){
-    //     echo "Usuario existe";
-    // }else{
-    //     echo "Usuario no existe";
-    // }
 ?>
