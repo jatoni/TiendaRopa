@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require_once("../controllers/LoginUserController.php");
     require("../models/Session.php");
 
@@ -11,13 +10,15 @@
         if(isset($_POST["correoUser"], $_POST["pass"])){
             $name = $_POST["correoUser"];
             $pass = $_POST["pass"];
-            $exists = $UserController->UserExists($name, $pass);
-            if($exists){
-                $session->setSession($UserController->User($name, $user));
+            
+            $email = $UserController->UserExists($name, $pass);
+            $user = $UserController->UserExistsWithUser($name, $pass);
+            if($user or $email){
+                $session->setSession($UserController->User($name, $name));
                 header("Location: ../views/home.php");
             }else{
-                $messageError = "Usuario no existe";
-                include("./views/login.php");
+                // header("Location: ../views/login.php");
+                echo "hola";
             }
         }
     }
