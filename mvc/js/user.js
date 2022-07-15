@@ -1,8 +1,8 @@
-const opUser = () => {
-    const menuDes = document.getElementById("des");
-    if(menuDes.style.display == "none"){
-        menuDes.style.display="block";
-    }else{
-        menuDes.style.display="none";
-    }
-}
+$(document).ready(function(){
+    $('.user').on('click', function(){
+        $('.menu .men .user .des').toggle();
+    });
+    $('.user').on('click',function(){
+        $('.menu .men .user .des').addClass('menu-up');
+    })
+})

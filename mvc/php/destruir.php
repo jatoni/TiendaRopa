@@ -5,6 +5,6 @@
 
     $session->closeSession();
 
-    header("Location: ../views/login.php");
+    header("Location: ../views/home.php");
 
 ?>

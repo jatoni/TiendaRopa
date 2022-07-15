@@ -1,10 +1,6 @@
 <?php
     require("../models/Session.php");
     $session = new SessionDes();
-
-    if($session->getSession() == ""){
-        header("Location: ../views/login.php");
-    }else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -21,7 +18,4 @@
     <script src="../js/user.js"></script>
 </body>
 </html>
-<?php
-    }
-?>
 

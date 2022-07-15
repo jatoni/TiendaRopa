@@ -11,8 +11,8 @@
                 $conn = new connection();
                 $query = $conn->getConnection()->prepare($sql);
                 $query->execute(array($email, $name));
-                return $query->fetchAll();
                 $conn->getCloseConnection();
+                return $query->fetchAll();
             }catch(PDOException $e){
                 echo "Hubo un error al hacer la busqueda: " . $e->getMessage();
             }
@@ -24,8 +24,8 @@
                 $conn = new connection();
                 $query = $conn->getConnection()->prepare($sql);
                 $query->execute();
-                return $query->fetchAll(PDO::FETCH_ASSOC);
                 $conn->getCloseConnection();
+                return $query->fetchAll(PDO::FETCH_ASSOC);
             }catch(PDOException $e){
                 echo "Hubo un error al hacer la busqueda: " . $e->getMessage();
             }
@@ -38,12 +38,12 @@
                 $conn = new connection();
                 $query = $conn->getConnection()->prepare($sql);
                 $query->execute(array($correo, $pass));
+                $conn->getCloseConnection();
                 if($query->rowCount()){
                     return true;
                 }else{
                     return false;
                 }
-                $conn->getCloseConnection();
             }catch(PDOException $e){
                 echo "Hubo un error al hacer la busqueda: " .$e->getMessage();
             }
@@ -56,12 +56,12 @@
                 $conn = new connection();
                 $query = $conn->getConnection()->prepare($sql);
                 $query->execute(array($user, $pass));
+                $conn->getCloseConnection();
                 if($query->rowCount()){
                     return true;
                 }else{
                     return false;
                 }
-                $conn->getCloseConnection();
             }catch(PDOException $e){
                 echo "Hubo un error en query: " . $e->getMessage();
             }

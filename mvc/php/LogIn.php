@@ -21,8 +21,7 @@
                 $session->setSession($userSession);
                 header("Location: ../views/home.php");
             }else{
-                // header("Location: ../views/login.php");
-                echo "hola";
+                header("Location: ../views/login.php");
             }
         }
     }
