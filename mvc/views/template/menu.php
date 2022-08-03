@@ -21,7 +21,7 @@
                 <ul id="des" class="des">
                     <li><?php echo $session->getSession(); ?></li>
                     <a href="setting.php"><li>Setting</li></a>
-                    <a href=".././php/destruir.php"><li>Cerrar</li></a>
+                    <a href="./../php/destruir.php"><li>Cerrar</li></a>
                 </ul>
             <?php
                 }
@@ -29,4 +29,4 @@
             </li>
             <li><p><i class="bi bi-cart-fill"></i></p></li>
         </ul>
-    </nav>
+</nav>

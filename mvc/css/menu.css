@@ -5,7 +5,7 @@
     list-style: none;
 }
 html{
-    background-color: #d4a373;
+    background-color: #fff;
 }
 nav.menu{
     display: flex;
@@ -25,6 +25,7 @@ nav.menu ul.men p{
 }
 nav.menu ul.men li ul.des{
     position: absolute;
+    top: 50px;
     width: 160px;
     text-align: center;
     border-radius: 10px;
@@ -34,9 +35,4 @@ nav.menu ul.men li ul.des{
 }
 nav.menu ul.men li ul.des li{
     padding: 10px;
-}
-ul.des.menu-up{
-    animation-name: MenuUp;
-    animation-duration: 1s;
-    transition: all ease-in-out;
 }

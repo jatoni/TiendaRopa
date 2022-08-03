@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php include("../views/template/menu.php");?>
-    <script src="../js/user.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
 

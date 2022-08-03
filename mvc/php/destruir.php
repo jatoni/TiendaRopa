@@ -1,10 +1,7 @@
 <?php
-    require("../models/Session.php");
+    require_once("../controllers/SessionKill.php");
 
-    $session = new SessionDes();
-
-    $session->closeSession();
-
-    header("Location: ../views/home.php");
-
+    $kill = new SessionKill();
+    
+    $kill->QuitSession();
 ?>
